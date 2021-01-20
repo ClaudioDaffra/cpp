@@ -15,8 +15,8 @@ FILE
 
     ex3: enable disable C C++ comments
     
-        win :   bin\cpp.exe -DDEBUG -D__STDC__ -C tst/ex0200.txt tst/x.out
-        lin :
+        win :   		bin\cpp.exe -DDEBUG -D__STDC__ -C tst/ex0300.txt tst/x.out
+        lin : valgrind	./bin/cpp	-DDEBUG -D__STDC__ -C tst/ex0300.txt tst/x.out
         
 COMMENTI
 
