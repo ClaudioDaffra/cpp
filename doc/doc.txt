@@ -1,0 +1,69 @@
+
+usage
+
+    cpp option filein[=stdin] fileout[=stdout]
+    
+    ex : bin\cpp.exe -DDEBUG -D__STDC__ -T -C tst/ex0200.txt tst/x.out
+    
+options
+
+    [ $CTMNOVv+I:D:U:F:lg ]
+    
+    N   ?
+    I   include header lib              :   -I"C:/includedir"
+    D   define macro command line       :   ex -DDEBUG
+    U   undefine macro command line     :   ex -U...
+    M   ?   set obj name                :   -M
+    v   $resivion$ $date$               :   -v
+    V   verbose output                  :   -V
+    +   c++                             :   -+
+    T   disable trigraph                :   -T   
+    C   disable C C++ comments          :   -C
+	$	disable dollar in macro			:	-$
+   
+keywords
+    
+    #if		    
+    #ifdef	    
+    #ifndef	    
+    #elif	    
+    #else	    
+    #endif	    
+    #include	    
+    #define	    
+    #undef    
+    #line	    
+    #error   
+    #pragma	    
+    #eval	    
+    defined
+    ident       ,   /* treat like pragma (ignored) */
+
+predefined macro
+
+    __LINE__  
+    __FILE__  
+    __DATE__  
+    __TIME__  
+    __STDC__        ( not defined )
+    
+    __VA_ARGS__     NO
+    ...             NO
+    
+example
+
+    ex01    :   show include file multpile levels
+    
+                win :   bin\cpp.exe tst/ex0101.txt tst/x.out
+                lin :
+
+                
+    ex02    :   show some more stuff
+
+                win :   bin\cpp.exe -DDEBUG -D__STDC__ tst/ex0200.txt tst/x.out
+                lin :
+
+/**/
+
+
+    

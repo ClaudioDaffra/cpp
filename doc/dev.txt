@@ -1,0 +1,55 @@
+
+FILE
+
+    I file vanno sempre inseriti con lo slash /
+
+    ex1 :   include multiple file
+    
+        win :   bin\cpp.exe tst/ex0101.txt tst/x.out
+        lin :
+        
+    ex2: enable disable Trigraphs & Define Macro
+    
+        win :   bin\cpp.exe -DDEBUG -D__STDC__ -T tst/ex0200.txt tst/x.out
+        lin :
+
+    ex3: enable disable C C++ comments
+    
+        win :   bin\cpp.exe -DDEBUG -D__STDC__ -C tst/ex0200.txt tst/x.out
+        lin :
+        
+COMMENTI
+
+    I commenti singola linea // sono in lex.c riga 160 :
+
+        COM1,	{ '/' },	COM4,   // comment single line 
+
+		if ( fp->state == COM1 && fp->ch[0] == '/' ) fp->nextstate = START ;
+		
+	commenti multilinea 
+	
+		if ( fp->state == COM1 && fp->ch[0] == '*' ) fp->nextstate = START ; 
+				
+    mentre quelli multi linea sono sempre in lex.c riga 515 :
+
+        case S_COMMENT: // Commento multi line
+
+TRIGRAPH
+
+    Vengono gestiti alla linea 429 in lex.c [ enable by default ]
+    
+        if( Trigraphs==1 ) // check trigraph available
+    
+    alla linea 15 in unix.c     
+    
+        int     Trigraphs = 1   ; // enable Trigraphs
+	
+$DIRECTIVE
+
+	Data la possibilità di gestire la macro con il dollaro
+	expand.c : 
+	
+		case C_ALPH :
+		
+
+	
