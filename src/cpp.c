@@ -4,6 +4,7 @@
 #include <time.h>
 #include <stdarg.h>
 #include "cpp.h"
+#include "gc.h"
 
 #ifdef __GNUC__
 #pragma GCC diagnostic push
@@ -39,6 +40,8 @@ checkNewFlag(int argc, char **argv) // Fix Get opt
 int
 main(int argc, char **argv)
 {
+	gcStart();
+	
     checkNewFlag(argc,argv);
     
 	Tokenrow tr;
@@ -59,6 +62,7 @@ main(int argc, char **argv)
 	fflush(stderr);
 	exit(nerrs > 0);
     
+    gcStop();
 	return 0;
 }
 
@@ -272,7 +276,7 @@ control(Tokenrow *trp)
 void *
 domalloc(int size)
 {
-	void *p = malloc(size);
+	void *p = gcMalloc(size);
 
 	if (p==NULL)
 		error(FATAL, "Out of memory from malloc");
@@ -282,7 +286,7 @@ domalloc(int size)
 void
 dofree(void *p)
 {
-	free(p);
+	gcFree(p);
 }
 
 void

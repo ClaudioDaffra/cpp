@@ -11,8 +11,9 @@ SOURCES =       \
 	src\macro.c		\
 	src\nlist.c		\
 	src\tokens.c    \
-	src\unix.c
-    
+	src\unix.c		\
+	src\gc.c
+	    
 all: $(TARGET)
 
 $(TARGET):$(SOURCES)

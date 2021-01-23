@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "cpp.h"
+#include "gc.h"
 
 #ifdef __GNUC__
 #pragma GCC diagnostic push
@@ -97,9 +98,9 @@ growtokenrow(Tokenrow *trp)
 	int nlast = trp->lp - trp->bp;
 
 	trp->max = 3*trp->max/2 + 1;
-	trp->bp = (Token *)realloc(trp->bp, trp->max*sizeof(Token));
+	trp->bp = (Token *)gcRealloc(trp->bp, trp->max*sizeof(Token));
 	if (trp->bp == NULL)
-		error(FATAL, "Out of memory from realloc");
+		error(FATAL, "Out of memory from gcRealloc");
 	trp->lp = &trp->bp[nlast];
 	trp->tp = &trp->bp[ncur];
 	return trp->lp;

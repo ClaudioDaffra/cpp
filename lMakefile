@@ -12,7 +12,8 @@ SDIR=src
 BDIR=bin
 LDIR=lib
 
-OBJS =  cpp.o		\
+OBJS =  gc.o		\
+		cpp.o		\
 		eval.o		\
 		getopt.o 	\
 		hideset.o	\
@@ -22,6 +23,7 @@ OBJS =  cpp.o		\
 		nlist.o		\
 		tokens.o	\
 		unix.o
+
 		
     
 OBJ = $(patsubst %,$(ODIR)/%,$(OBJS))

@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "cpp.h"
+#include "gc.h"
 
 /*
  * A hideset is a null-terminated array of Nlist pointers.
@@ -53,9 +54,9 @@ newhideset(int hs, Nlist *np)
 		return hs;
 	if (nhidesets >= maxhidesets) {
 		maxhidesets = 3*maxhidesets/2+1;
-		hidesets = (Hideset *)realloc(hidesets, (sizeof (Hideset *))*maxhidesets);
+		hidesets = (Hideset *)gcRealloc(hidesets, (sizeof (Hideset *))*maxhidesets);
 		if (hidesets == NULL)
-			error(FATAL, "Out of memory from realloc");
+			error(FATAL, "Out of memory from gcRealloc");
 	}
 	hs1 = (Hideset)domalloc(len*sizeof *hs1);
 	memmove(hs1, nhs, len*sizeof *hs1);
