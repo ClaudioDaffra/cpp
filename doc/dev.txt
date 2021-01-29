@@ -6,12 +6,12 @@ FILE
     ex1 :   include multiple file
     
         win :   bin\cpp.exe tst/ex0101.txt tst/x.out
-        lin :
+        lin :	./bin/cpp   tst/ex0101.txt tst/x.out
         
     ex2: enable disable Trigraphs & Define Macro
     
         win :   bin\cpp.exe -DDEBUG -D__STDC__ -T tst/ex0200.txt tst/x.out
-        lin :
+        lin :	./bin/cpp   -DDEBUG -D__STDC__ -T tst/ex0200.txt tst/x.out
 
     ex3: enable disable C C++ comments
     
