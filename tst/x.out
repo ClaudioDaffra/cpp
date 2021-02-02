@@ -1,13 +1,8 @@
-#line 1 "tst\ex0400.txt"
+#line 1 "tst/ex0400.txt"
 
 int main(void)
 {
 
-    printf("_MSC_VER %d.\n",1916);
-
-
-
-    printf("_WIN32 %d.\n",1);
 
 
 
@@ -20,6 +15,11 @@ int main(void)
 
 
 
+    printf("__GNUC__ %d.\n",10);
+
+
+
+    printf("__linux__ %d.\n",1);
 
 
     return 0 ;

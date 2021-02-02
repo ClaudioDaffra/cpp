@@ -12,5 +12,5 @@
 10) [ ] reformat code
 11) [v] compiling with -Wall
 12) [v] add doc.tx & dev.txt
-
+13) [v] add _MSC_VER , _WIN32 , _WIN64 , __linux__ __GNUC__
  

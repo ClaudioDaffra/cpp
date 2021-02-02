@@ -56,7 +56,7 @@ kwtab[] =
 	{ "_WIN32" ,	K_WIN32    ,   ISMAC+ISUNCHANGE             } ,  // _WIN32    
 #endif
 #ifdef _WIN64
-	{ "_WIN32" ,	K_WIN64    ,   ISMAC+ISUNCHANGE             } ,  // _WIN64 
+	{ "_WIN64" ,	K_WIN64    ,   ISMAC+ISUNCHANGE             } ,  // _WIN64 
 #endif
 #ifdef __GNUC__
 	{ "__GNUC__" ,	K__GNUC__    ,   ISMAC+ISUNCHANGE           } ,  // __GNUC__ 
