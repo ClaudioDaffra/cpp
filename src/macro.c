@@ -459,6 +459,8 @@ stringify(Tokenrow *vp)
 /*
  * expand a builtin name
  */
+static int COUNT=0; // __COUNT__
+
 void
 builtin(Tokenrow *trp, int biname)
 {
@@ -509,6 +511,11 @@ builtin(Tokenrow *trp, int biname)
 		op += 8;
 		break;
 
+	case KCOUNT:
+		tp->type = NUMBER;
+		op = outnum(op-1, COUNT++);
+		break;
+        
 	default:
 		error(ERROR, "cpp botch: unknown internal macro");
 		return;

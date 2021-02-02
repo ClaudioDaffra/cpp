@@ -46,22 +46,28 @@ predefined macro
     __DATE__  
     __TIME__  
     __STDC__        ( not defined )
-    
+    __COUNT__       incrementa counter
     __VA_ARGS__     NO
     ...             NO
     
 example
 
-    ex01    :   show include file multpile levels
+    ex1 :   include multiple file
     
-                win :   bin\cpp.exe tst/ex0101.txt tst/x.out
-                lin :
+        win :   bin\cpp.exe tst/ex0101.txt tst/x.out
+        lin :	./bin/cpp   tst/ex0101.txt tst/x.out
+        
+    ex2: enable disable Trigraphs & Define Macro
+    
+        win :   bin\cpp.exe -DDEBUG -D__STDC__ -T tst/ex0200.txt tst/x.out
+        lin :	./bin/cpp   -DDEBUG -D__STDC__ -T tst/ex0200.txt tst/x.out
 
-                
-    ex02    :   show some more stuff
+    ex3: enable disable C C++ comments
+    
+        win :   		bin\cpp.exe -DDEBUG -D__STDC__ -C tst/ex0300.txt tst/x.out
+        lin : valgrind	./bin/cpp	-DDEBUG -D__STDC__ -C tst/ex0300.txt tst/x.out
 
-                win :   bin\cpp.exe -DDEBUG -D__STDC__ tst/ex0200.txt tst/x.out
-                lin :
+
 
 /**/
 

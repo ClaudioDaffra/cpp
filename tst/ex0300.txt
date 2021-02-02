@@ -22,12 +22,18 @@ int main(void)
 
     #ifdef __STDC__
     
-    printf ( "%s %s %s %s %s\n"
+    printf ( "%s %s %s %s %s %s\n"
     ,   __FILE__   
-    ,   __DATE__ ,     __TIME__  ,   __LINE__  , __STDC__  ) ;
+    ,   __DATE__ 
+    ,   __TIME__  
+    ,   __LINE__  
+    ,   __STDC__
+    ,   __COUNT__
+    ) ;
 
     #endif
     
+    printf("%d %d",__COUNT__,__COUNT__);
  
     return 0 ;
 }

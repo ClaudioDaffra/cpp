@@ -23,6 +23,7 @@ int	ifdepth;
 int	ifsatisfied[NIF];
 int	skipping;
 
+
 //char rcsid[] = "$Revision$ $Date$";
 char rcsid[] = "\nv0.1 19/01/2021";
 
