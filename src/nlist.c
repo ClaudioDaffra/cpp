@@ -48,6 +48,23 @@ kwtab[] =
 	{ "__TIME__"    ,	KTIME       ,   ISMAC+ISUNCHANGE 	    } ,
 	{ "__STDC__"    ,	KSTDC       ,   ISUNCHANGE 		        } ,
 	{ "__COUNTER__" ,	KCOUNTER    ,   ISMAC+ISUNCHANGE        } ,  // __COUNTER__  
+    
+#ifdef _MSC_VER
+	{ "_MSC_VER" ,	K_MSC_VER    ,   ISMAC+ISUNCHANGE           } ,  // _MSC_VER          
+#endif
+#ifdef _WIN32
+	{ "_WIN32" ,	K_WIN32    ,   ISMAC+ISUNCHANGE             } ,  // _WIN32    
+#endif
+#ifdef _WIN64
+	{ "_WIN32" ,	K_WIN64    ,   ISMAC+ISUNCHANGE             } ,  // _WIN64 
+#endif
+#ifdef __GNUC__
+	{ "__GNUC__" ,	K__GNUC__    ,   ISMAC+ISUNCHANGE           } ,  // __GNUC__ 
+#endif
+#ifdef __linux__
+	{ "__linux__" ,	K__linux__    ,   ISMAC+ISUNCHANGE          } ,  // __linux__ 
+#endif    
+
 	{ NULL 		    , 	0 	        ,   0  					    } 
 };
 

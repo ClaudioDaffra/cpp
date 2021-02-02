@@ -516,6 +516,37 @@ builtin(Tokenrow *trp, int biname)
 		op = outnum(op-1, COUNTER++);
 		break;
         
+#ifdef _MSC_VER
+	case K_MSC_VER:
+		tp->type = NUMBER;
+		op = outnum(op-1, _MSC_VER);
+		break;
+#endif
+#ifdef _WIN32
+	case K_WIN32:
+		tp->type = NUMBER;
+		op = outnum(op-1, _WIN32);
+		break;
+#endif
+#ifdef _WIN64
+	case K_WIN64:
+		tp->type = NUMBER;
+		op = outnum(op-1, _WIN64);
+		break;
+#endif
+#ifdef __GNUC__
+	case K__GNUC__:
+		tp->type = NUMBER;
+		op = outnum(op-1, __GNUC__);
+		break;
+#endif
+#ifdef __linux__
+	case K__linux__:
+		tp->type = NUMBER;
+		op = outnum(op-1, __linux__);
+		break;
+#endif
+
 	default:
 		error(ERROR, "cpp botch: unknown internal macro");
 		return;

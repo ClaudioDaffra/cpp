@@ -3,6 +3,24 @@
 int main(void)
 {
 
-#line 10 "tst\ex0400.txt"
+    printf("_MSC_VER %d.\n",1916);
+
+
+
+    printf("_WIN32 %d.\n",1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     return 0 ;
 }

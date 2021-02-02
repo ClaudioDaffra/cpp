@@ -27,9 +27,27 @@ enum toktype { END, UNCLASS, NAME, NUMBER, STRING, CCON, NL, WS, DSHARP,
 		ASRSH, ASOR, ASAND, ELLIPS,
 		DSHARP1, NAME1, DEFINED, UMINUS };
 
-enum kwtype { KIF, KIFDEF, KIFNDEF, KELIF, KELSE, KENDIF, KINCLUDE, KDEFINE,
+enum kwtype 
+{       KIF, KIFDEF, KIFNDEF, KELIF, KELSE, KENDIF, KINCLUDE, KDEFINE,
 		KUNDEF, KLINE, KERROR, KPRAGMA, KDEFINED,
-		KLINENO, KFILE, KDATE, KTIME, KSTDC, KEVAL , KCOUNTER };
+		KLINENO, KFILE, KDATE, KTIME, KSTDC, KEVAL , KCOUNTER 
+#ifdef _MSC_VER
+        , K_MSC_VER
+#endif
+#ifdef _WIN32
+        , K_WIN32
+#endif
+#ifdef _WIN64
+        , K_WIN64
+#endif
+#ifdef __GNUC__
+        , K__GNUC__
+#endif
+#ifdef __linux__
+        , K__linux__
+#endif
+
+};
 
 #define	ISDEFINED	01	/* has #defined value */
 #define	ISKW		02	/* is PP keyword */
