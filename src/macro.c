@@ -459,7 +459,7 @@ stringify(Tokenrow *vp)
 /*
  * expand a builtin name
  */
-static int COUNT=0; // __COUNT__
+static int COUNTER=0; // __COUNT__
 
 void
 builtin(Tokenrow *trp, int biname)
@@ -511,9 +511,9 @@ builtin(Tokenrow *trp, int biname)
 		op += 8;
 		break;
 
-	case KCOUNT:
+	case KCOUNTER:
 		tp->type = NUMBER;
-		op = outnum(op-1, COUNT++);
+		op = outnum(op-1, COUNTER++);
 		break;
         
 	default:
