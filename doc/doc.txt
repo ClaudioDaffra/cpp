@@ -23,20 +23,20 @@ options
    
 keywords
     
-    #if		    
-    #ifdef	    
-    #ifndef	    
-    #elif	    
-    #else	    
-    #endif	    
-    #include	    
-    #define	    
-    #undef    
-    #line	    
-    #error   
-    #pragma	    
-    #eval	    
-    defined
+    #if             v		    
+    #ifdef          v	    
+    #ifndef         v	    
+    #elif           v	    
+    #else           v	    
+    #endif	        v
+    #include        v	    
+    #define         v	    
+    #undef          v    
+    #line           v	    
+    #error          v  
+    #pragma	        v
+    #eval               ?	    
+    defined         v       :   #if defined(DEBUG)
     ident       ,   /* treat like pragma (ignored) */
 
 predefined macro
@@ -46,7 +46,8 @@ predefined macro
     __DATE__  
     __TIME__  
     __STDC__        ( not defined )
-    __COUNT__       incrementa counter
+    __COUNT__       incremental counter
+    
     __VA_ARGS__     NO
     ...             NO
     

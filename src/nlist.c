@@ -46,8 +46,8 @@ kwtab[] =
 	{ "__FILE__",	KFILE,		ISMAC+ISUNCHANGE 	    } ,
 	{ "__DATE__",	KDATE,		ISMAC+ISUNCHANGE 	    } ,
 	{ "__TIME__",	KTIME,		ISMAC+ISUNCHANGE 	    } ,
-	{ "__STDC__",	KSTDC,		ISUNCHANGE 		        } ,
-	{ "__COUNT__",	KCOUNT,		ISMAC+ISUNCHANGE        } ,  // __COUNT__  
+	{ "__STDC__" ,	KSTDC,		ISUNCHANGE 		        } ,
+	{ "__COUNTER__",	KCOUNT,		ISMAC+ISUNCHANGE    } ,  // __COUNTER__  
 	{ NULL 		, 	0 	 , 		0  					    } 
 };
 

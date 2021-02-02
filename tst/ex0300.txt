@@ -12,6 +12,8 @@ int main(void)
 {
     #ifdef DEBUG
     printf ( "-DDEBUG\n" ) ;
+    #else
+    // NO DEBUG
     #endif
     
     printf ( "%d %d\n",MIN(1,2),MAX(1,2) ) ;
@@ -28,12 +30,24 @@ int main(void)
     ,   __TIME__  
     ,   __LINE__  
     ,   __STDC__
-    ,   __COUNT__
+    ,   __COUNTER__
     ) ;
+    
+#line 45
 
     #endif
-    
-    printf("%d %d",__COUNT__,__COUNT__);
+
+#undef DEBUG
+#eval 3+2
+#pragma xxx
+
+#ifndef DEBUG
+ciao;
+#elif __STDC__
+bau;
+#endif
+  
+    printf("%d %d",__COUNTER__,__COUNTER__);
  
     return 0 ;
 }
