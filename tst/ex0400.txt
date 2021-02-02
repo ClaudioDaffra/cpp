@@ -1,0 +1,11 @@
+ 
+int main(void)
+{
+/*
+ #ifdef __linux__
+ printf("OS linux");
+ #endif
+ 
+ */
+    return 0 ;
+}

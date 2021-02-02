@@ -262,7 +262,10 @@ expandlex(void)
             for (fp = fsm; fp->state>=0; fp++) 
             {
                 if ( fp->state == COM1 && fp->ch[0] == '/' ) fp->nextstate = START ;
-                if ( fp->state == COM1 && fp->ch[0] == '*' ) fp->nextstate = START ;                
+                if ( fp->state == COM1 && fp->ch[0] == '*' ) fp->nextstate = START ; 
+                
+                if ( fp->state == COM1 && fp->ch[0] == '*' ) fp->nextstate = START ;
+                if ( fp->state == COM1 && fp->ch[0] == '/' ) fp->nextstate = START ;                 
             }
         } 
     
